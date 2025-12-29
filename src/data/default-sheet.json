@@ -1,0 +1,137 @@
+{
+	"name": "New Character",
+	"attributes": {
+		"strength": {
+			"current": 10,
+			"max": 10
+		},
+		"agility": {
+			"current": 10,
+			"max": 10
+		},
+		"stamina": {
+			"current": 10,
+			"max": 10
+		},
+		"intelligence": {
+			"current": 10,
+			"max": 10
+		},
+		"personality": {
+			"current": 10,
+			"max": 10
+		},
+		"luck": {
+			"current": 10,
+			"max": 10
+		}
+	},
+	"saves": {
+		"fortitude": 0,
+		"reflex": 0,
+		"will": 0
+	},
+	"mutations": {
+		"active": [
+			{
+				"name": "New Mutation",
+				"range": "10'/CL",
+				"duration": "Instant",
+				"save": "PER",
+				"manifestation": "Glowing Eyes",
+				"lost": false
+			}
+		],
+		"passive": [
+			{
+				"name": "New Mutation",
+				"check-result": "20",
+				"manifestation": "Physical",
+				"effect": "Unknown"
+			}
+		]
+	},
+	"abilities": [
+		{
+			"name": "New Ability",
+			"description": "Describe your ability here."
+		}
+	],
+	"weapons-melee": [
+		{
+			"name": "Fists",
+			"attack-bonus": "+0",
+			"damage": "1d3+0",
+			"type": "Bludgeoning",
+			"notes": "Natural Weapon"
+		}
+	],
+	"weapons-ranged": [
+		{
+			"name": "Stone",
+			"attack-bonus": "+0",
+			"damage": "1d3+0",
+			"range": "10/20/30",
+			"notes": "Improvised"
+		}
+	],
+	"armor": [
+		{
+			"name": "Clothes",
+			"ac-bonus": "+0",
+			"fumble-die": "1d4",
+			"notes": ""
+		}
+	],
+	"items": [
+		{
+			"name": "New Item",
+			"quantity": 1
+		}
+	],
+	"artifacts": [
+		{
+			"name": "New Artifact",
+			"tech-level": "1",
+			"complexity": "1",
+			"check-result": "-"
+		}
+	],
+	"notes": [
+		{
+			"name": "New Note",
+			"notes": "Write your note here."
+		}
+	],
+	"level": 0,
+	"xp": 0,
+	"artifact-check": 0,
+	"max-tech-level": 0,
+	"speed": 30,
+	"hp": {
+		"current": 10,
+		"max": 10
+	},
+	"ac": 10,
+	"action-dice": "d20",
+	"crit-die": "1d4",
+	"crit-table": "I",
+	"attack-bonus": 0,
+	"calculated": {
+		"melee-attack-bonus": 0,
+		"missile-attack-bonus": 0,
+		"melee-damage-bonus": 0,
+		"missile-damage-bonus": 0,
+		"initiative": 0
+	},
+	"modifiers": {
+		"melee-attack-bonus": 0,
+		"missile-attack-bonus": 0,
+		"melee-damage-bonus": 0,
+		"missile-damage-bonus": 0,
+		"initiative": 0
+	},
+	"lucky-roll": "sign (+0 to something)",
+	"alignment": "Tribal",
+	"class": "Hunter/Gatherer"
+}

@@ -1,0 +1,780 @@
+@font-face {
+  font-family: 'Irwin Allen';
+  src: url('/fonts/irwinallen.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Serif Pro';
+  src: url('/fonts/sourcebold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+:root {
+  font-family: 'Source Serif Pro', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 14px;
+
+  color-scheme: light dark;
+  --darkest-color: #111;
+  --lightest-color: #eee;
+  --light-color: #dedede;
+  --medium-light-color: #cecece;
+  --darkest-light-color: #bebebe;
+  --dark-color: #323232;
+  --neutral-color: #777;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --darkest-color: #eee;
+    --lightest-color: #111;
+  }
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #888;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--lightest-color);
+  color: var(--darkest-color);
+}
+
+#app {
+  margin: 0;
+  padding: 8px;
+  text-align: center;
+  width: 100%;
+  height: calc(100% - 16px);
+}
+
+.mcc {
+  width: calc(100% - 24px);
+  border-radius: 16px;
+  border-color: var(--darkest-color);
+  border-style: solid;
+  border-width: 12px;
+  border-top-width: 32px;
+  border-bottom-width: 32px;
+  margin-top: 8px;
+  background-color: var(--darkest-color);
+  height: calc(100% - 80px);
+}
+
+.mcc .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  border-radius: 8px;
+  background-color: var(--lightest-color);
+  height: 580px;
+  padding: 0 4px;
+}
+
+.mcc h1 {
+  font-family: 'Irwin Allen', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  margin-top: -45px;
+  margin-bottom: 0;
+  height: 45px;
+  font-size: 24px;
+  color: var(--lightest-color);
+  text-shadow:
+    -2px -2px 0 var(--darkest-color),
+    0 -2px 0 var(--darkest-color),
+    2px -2px 0 var(--darkest-color),
+    2px 0 0 var(--darkest-color),
+    2px 2px 0 var(--darkest-color),
+    0 2px 0 var(--darkest-color),
+    -2px 2px 0 var(--darkest-color),
+    -2px 0 0 var(--darkest-color);
+}
+
+.mcc input {
+  border-radius: 6px;
+  height: 28px;
+  background-color: var(--lightest-color);
+  border: 2px solid var(--darkest-color);
+  color: var(--darkest-color);
+  font-size: 16px;
+  width: calc(100% - 12px);
+  margin-bottom: 2px;
+  padding-left: 4px;
+}
+
+.mcc p.label {
+  display: block;
+  text-align: left;
+  margin-top: -4px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.mcc .content .section {
+  padding: 8px 4px;
+}
+
+.mcc .two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  position: relative;
+  column-gap: 14px;
+  margin: 4px 0;
+
+}
+
+.mcc .two-columns.ac-hp {
+  height: 110px;
+}
+
+.mcc .two-columns .circle {
+  position: absolute;
+  left: 10px;
+  width: 70px;
+  height: 70px;
+  border: var(--darkest-color) 4px solid;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.mcc .two-columns .square {
+  position: absolute;
+  right: 10px;
+  width: 70px;
+  height: 70px;
+  border: var(--darkest-color) 4px solid;
+  border-radius: 12px;
+  float: right;
+}
+
+.mcc .two-columns .circle p,
+.mcc .two-columns .square p {
+  position: absolute;
+  bottom: -45px;
+  width: 70px;
+  text-align: center;
+}
+
+.mcc .attributes {
+  display: grid;
+  grid-template-columns: 50px auto;
+  grid-template-rows: repeat(6, 55px);
+  width: calc(100% - 22px);
+  border: var(--darkest-color) 2px solid;
+  border-radius: 6px;
+  padding: 8px;
+  row-gap: 8px;
+  column-gap: 8px;
+}
+
+.mcc .attributes .circle {
+  width: 49px;
+  height: 49px;
+  border: var(--darkest-color) 2px solid;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.mcc .attributes p {
+  margin: 0;
+  text-align: left;
+  line-height: 16px;
+  font-size: 13px;
+  vertical-align: middle;
+  font-weight: 500;
+}
+
+.mcc .attributes .modifier-section {
+  padding-top: 8px;
+}
+
+.mcc .attributes .modifier-section p {
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.mcc p.clickable:hover {
+  cursor: pointer;
+  color: var(--neutral-color);
+}
+
+.mcc .attributes .modifier-section .modifier {
+  border: var(--darkest-color) 2px solid;
+  border-radius: 6px;
+  padding: 4px 4px;
+  padding-top: 0;
+  height: 12px;
+  display: grid;
+  grid-template-columns: max-content auto;
+  font-size: 12px;
+}
+
+.mcc .attributes .modifier-section .modifier p {
+  font-size: 12px;
+}
+
+.mcc .attributes .modifier-section .modifier input {
+  border: none;
+  margin-left: 4px;
+  height: 15px;
+  line-height: 15px;
+  font-size: 13px;
+  vertical-align: middle;
+  background: none;
+  text-align: center;
+}
+
+.mcc .three-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  position: relative;
+  column-gap: 6px;
+  margin: 4px 0;
+}
+
+.mcc .container-with-header {
+  width: calc(100% - 4px);
+  border: 2px solid var(--darkest-color);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.mcc .container-with-header .label {
+  display: block;
+  font-weight: 600;
+  text-align: center;
+  font-size: 12px;
+  width: 100%;
+  background-color: var(--darkest-color);
+  color: var(--lightest-color);
+  line-height: 12px;
+  padding: 4px 0;
+}
+
+.mcc .container-with-header input {
+  border: none;
+  height: 22px;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  padding: 4px;
+  width: calc(100% - 8px);
+  margin: 0;
+  color: var(--darkest-color);
+}
+
+.mcc .container-with-header textarea {
+  line-height: 14px;
+  font-size: 14px;
+  resize: none;
+  width: calc(100% - 8px);
+  height: 30px;
+  background: none;
+  color: var(--darkest-color);
+  padding: 0 4px;
+  text-align: left;
+  border: none;
+  padding-top: 4px;
+  margin-bottom: -4px;
+  text-align: center;
+}
+
+.mcc .tab .container-with-header p.label {
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+.mcc .black-container {
+  background-color: var(--darkest-color);
+  color: var(--lightest-color);
+  border-radius: 6px;
+  padding: 6px 8px;
+  grid-column-end: span 3;
+  width: calc(100% - 16px);
+  margin-bottom: 6px;
+  margin-top: 2px;
+  display: grid;
+  grid-template-columns: 50px auto;
+}
+
+.mcc .black-container p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.mcc .black-container .container {
+  text-align: left;
+  padding-left: 12px;
+  width: calc(100% - 12px);
+  height: 50px;
+}
+
+.mcc .black-container .two-columns {
+  text-align: center;
+  width: 100%;
+  grid-template-columns: max-content auto;
+  background-color: var(--lightest-color);
+  border-radius: 4px;
+  height: 16px;
+  column-gap: 0;
+}
+
+.mcc .black-container .two-columns p {
+  margin: 0;
+  padding-left: 4px;
+  font-size: 11px;
+  color: var(--darkest-color)
+}
+
+.mcc .black-container .two-columns input {
+  border-radius: 6px;
+  height: 16px;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+  margin-left: 4px;
+  width: calc(100% - 4px);
+  padding: 0;
+  border: none;
+  text-align: center;
+}
+
+.mcc .black-container .circle {
+  width: 50px;
+  height: 50px;
+  background-color: var(--lightest-color);
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.mcc .tab-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 0.75fr;
+  grid-column-gap: 2px;
+  margin-bottom: 8px;
+}
+
+.mcc .tab-buttons button {
+  border: 2px solid var(--darkest-color);
+  border-radius: 6px;
+  background-color: var(--darkest-color);
+  color: var(--lightest-color);
+  font-size: 16px;
+  padding: 6px 0;
+}
+
+.mcc .tab-buttons button:hover {
+  cursor: pointer;
+  border: 2px solid var(--darkest-color);
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+.mcc .tab-equipment,
+.mcc .tab-inventory,
+.mcc .tab-artifacts,
+.mcc .tab-mutations,
+.mcc .tab-notes {
+  display: none;
+}
+
+.mcc input#active-tab[value="tab-equipment"]~.tab-equipment,
+.mcc input#active-tab[value="tab-inventory"]~.tab-inventory,
+.mcc input#active-tab[value="tab-artifacts"]~.tab-artifacts,
+.mcc input#active-tab[value="tab-mutations"]~.tab-mutations,
+.mcc input#active-tab[value="tab-notes"]~.tab-notes {
+  display: grid;
+  height: 522px;
+}
+
+.mcc .third-section .container-with-header {
+  overflow: auto;
+}
+
+.mcc input#active-tab[value="tab-equipment"]~.tab-equipment {
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.mcc input#active-tab[value="tab-equipment"]~.tab-buttons button[name="button-equipment"],
+.mcc input#active-tab[value="tab-inventory"]~.tab-buttons button[name="button-inventory"],
+.mcc input#active-tab[value="tab-artifacts"]~.tab-buttons button[name="button-artifacts"],
+.mcc input#active-tab[value="tab-mutations"]~.tab-buttons button[name="button-mutations"],
+.mcc input#active-tab[value="tab-notes"]~.tab-buttons button[name="button-notes"] {
+  border: 2px solid var(--dark-color);
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  height: 34px;
+}
+
+.mcc .third-section .tab .container-with-header p {
+  padding-left: 40px;
+  width: calc(100% - 40px);
+}
+
+.mcc .third-section .tab .container-with-header p button {
+  float: right;
+  padding: 0 4px;
+  margin: 0;
+  margin-right: 4px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  line-height: 15px;
+  font-size: 15px;
+}
+
+.mcc .third-section .tab .container-with-header p button:hover {
+  color: var(--neutral-color);
+}
+
+.mcc .circle input,
+.mcc .square input {
+  border: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background-color: transparent;
+}
+
+.mcc .ac-hp .square input:nth-child(odd) {
+  height: 45px;
+  line-height: 40px;
+  font-size: 40px;
+}
+
+.mcc .ac-hp .square input:nth-child(even) {
+  height: 25px;
+  font-size: 20px;
+}
+
+.mcc .ac-hp .circle input {
+  height: 100%;
+  line-height: 100%;
+  font-size: 40px;
+}
+
+.mcc .three-columns .circle input {
+  width: 100%;
+  height: 100%;
+  font-size: 28px;
+  letter-spacing: -0.025em;
+}
+
+.mcc .attributes .circle input:nth-child(odd) {
+  height: 26px;
+  line-height: 26px;
+  font-size: 26px;
+  padding-top: 6px;
+
+}
+
+.mcc .attributes .circle input:nth-child(even) {
+  height: 14px;
+  line-height: 14px;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+.mcc .combat-basics {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+  display: grid;
+  grid-template-columns: max-content auto;
+  grid-template-rows: repeat(4, 23px);
+  font-size: 12px;
+  grid-row-gap: 1px;
+}
+
+.mcc .combat-basics p {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  width: calc(100% - 4px);
+  padding-left: 4px;
+  padding-top: 4px;
+}
+
+.mcc .combat-basics input {
+  height: 14px;
+  line-height: 12px;
+  font-size: 12px;
+  padding: 0;
+  padding-right: 4px;
+  text-align: left;
+  margin-top: 6px;
+  width: calc(100% - 4px);
+  border-radius: 0;
+}
+
+.mcc .first-section {
+  position: relative;
+}
+
+.mcc .reload {
+  position: absolute;
+  padding: 0;
+  top: 16px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: var(--darkest-color);
+  font-size: 20px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.mcc .reload:hover {
+  color: var(--neutral-color);
+  font-size: 22px;
+  top: 16px;
+  right: 9px;
+}
+
+.mcc .tab .container-with-header div {
+  font-size: 12px;
+  line-height: 14px;
+  height: 14px;
+  text-align: left;
+  font-family: 'Arial', sans-serif;
+  font-weight: 400;
+  padding: 0;
+}
+
+.mcc .tab .repeating div {
+  height: 16px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.mcc .repeating input {
+  font-size: 12px;
+  padding: 0 4px;
+  margin: 0;
+  height: 16px;
+  line-height: 16px;
+  background-color: var(--lightest-color);
+  width: calc(100% - 10px);
+  border-radius: 0;
+}
+
+.mcc .repeating-weapons-melee div:nth-child(7n+1),
+.mcc .repeating-weapons-ranged div:nth-child(9n+1),
+.mcc .repeating-armor input:nth-child(5n+1),
+.mcc .repeating-items input:nth-child(2n+1),
+.mcc .repeating-artifacts input:nth-child(4n+1),
+.mcc .repeating-abilities input:nth-child(2n+1),
+.mcc .repeating-mutations-active input:nth-child(5n+1),
+.mcc .repeating-mutations-passive input:nth-child(4n+1),
+.mcc .repeating-notes input:nth-child(2n+1) {
+  border-left: none !important;
+  width: calc(100% - 2px);
+  padding-right: 4px;
+}
+
+.mcc .repeating-weapons-melee div:nth-child(7n+7),
+.mcc .repeating-weapons-ranged div:nth-child(9n+9),
+.mcc .repeating-armor div:nth-child(5n+5),
+.mcc .repeating-items input:nth-child(2n+2),
+.mcc .repeating-artifacts input:nth-child(4n+4),
+.mcc .repeating-abilities input:nth-child(2n+2),
+.mcc .repeating-mutations-active input:nth-child(5n+5),
+.mcc .repeating-mutations-passive input:nth-child(4n+4),
+.mcc .repeating-notes div:nth-child(2n+2) {
+  border-right: none !important;
+  width: calc(100% - 2px);
+  padding: 0;
+}
+
+.mcc .repeating-weapons-melee input:nth-child(7n+2),
+.mcc .repeating-weapons-ranged input:nth-child(9n+2),
+.mcc .repeating-armor input:nth-child(5n+1),
+.mcc .repeating-items input:nth-child(2n+1),
+.mcc .repeating-abilities input:nth-child(2n+1),
+.mcc .repeating-mutations-active input:nth-child(5n+1),
+.mcc .repeating-mutations-passive input:nth-child(4n+1),
+.mcc .repeating-notes input:nth-child(2n+1),
+.mcc .repeating-artifacts input:nth-child(4n+1) {
+  text-align: left;
+}
+
+.mcc .repeating-weapons-melee {
+  display: grid;
+  grid-template-columns: 14px 1.5fr 30px 0.75fr 1fr 16px 18px;
+  column-gap: 2px;
+}
+
+.mcc .repeating input,
+.mcc .repeating div {
+  background-color: var(--medium-light-color);
+  border-left: 2px solid var(--darkest-light-color);
+  border-right: 2px solid var(--darkest-light-color);
+  width: calc(100% - 8px);
+}
+
+.mcc .repeating-weapons-melee input:nth-child(14n+1),
+.mcc .repeating-weapons-melee input:nth-child(14n+2),
+.mcc .repeating-weapons-melee input:nth-child(14n+3),
+.mcc .repeating-weapons-melee input:nth-child(14n+4),
+.mcc .repeating-weapons-melee input:nth-child(14n+5),
+.mcc .repeating-weapons-melee div:nth-child(14n+6),
+.mcc .repeating-weapons-melee div:nth-child(14n+7) {
+  background-color: var(--light-color);
+}
+
+.mcc .repeating-weapons-ranged {
+  display: grid;
+  grid-template-columns: 14px 1.5fr 30px 0.8fr 1fr 1fr 30px 16px 18px;
+  column-gap: 2px;
+}
+
+.mcc .repeating-weapons-ranged div:nth-child(18n+1),
+.mcc .repeating-weapons-ranged input:nth-child(18n+2),
+.mcc .repeating-weapons-ranged input:nth-child(18n+3),
+.mcc .repeating-weapons-ranged input:nth-child(18n+4),
+.mcc .repeating-weapons-ranged input:nth-child(18n+5),
+.mcc .repeating-weapons-ranged input:nth-child(18n+6),
+.mcc .repeating-weapons-ranged input:nth-child(18n+7),
+.mcc .repeating-weapons-ranged div:nth-child(18n+8),
+.mcc .repeating-weapons-ranged div:nth-child(18n+9) {
+  background-color: var(--light-color);
+}
+
+.mcc .repeating-armor {
+  display: grid;
+  grid-template-columns: 3fr 30px 60px 16px 18px;
+  column-gap: 2px;
+}
+
+.mcc .repeating-armor input:nth-child(10n+1),
+.mcc .repeating-armor input:nth-child(10n+2),
+.mcc .repeating-armor input:nth-child(10n+3),
+.mcc .repeating-armor div:nth-child(10n+4),
+.mcc .repeating-armor div:nth-child(10n+5) {
+  background-color: var(--light-color);
+}
+
+.mcc .repeating .roll {
+  background-image: url('/images/d20.svg');
+  cursor: pointer;
+}
+
+.mcc .repeating .roll:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.mcc .repeating .notes-button {
+  background-image: url('/images/icon-note.svg');
+  cursor: pointer;
+}
+
+.mcc .repeating .notes-button:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.mcc .repeating .power-button {
+  background-image: url('/images/icon-battery.svg');
+  cursor: pointer;
+}
+
+.mcc .repeating .power-button:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.mcc .repeating-items {
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  column-gap: 2px;
+}
+
+.mcc .repeating-items input:nth-child(4n+1),
+.mcc .repeating-items input:nth-child(4n+2) {
+  background-color: var(--light-color);
+}
+
+.mcc .repeating-abilities {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 2px;
+}
+
+.mcc .repeating-abilities input:nth-child(4n+1),
+.mcc .repeating-abilities input:nth-child(4n+2) {
+  background-color: var(--light-color);
+}
+
+.mcc .repeating-mutations-active {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 0.5fr 1.5fr 0.5fr;
+  column-gap: 2px;
+}
+
+.mcc .repeating-mutations-active input:nth-child(10n+1),
+.mcc .repeating-mutations-active input:nth-child(10n+2),
+.mcc .repeating-mutations-active input:nth-child(10n+3),
+.mcc .repeating-mutations-active input:nth-child(10n+4),
+.mcc .repeating-mutations-active input:nth-child(10n+5) {
+  background-color: var(--light-color);
+}
+
+.mcc .repeating-mutations-passive {
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr 1.5fr 2fr;
+  column-gap: 2px;
+}
+
+.mcc .repeating-mutations-passive input:nth-child(8n+1),
+.mcc .repeating-mutations-passive input:nth-child(8n+2),
+.mcc .repeating-mutations-passive input:nth-child(8n+3),
+.mcc .repeating-mutations-passive input:nth-child(8n+4) {
+  background-color: var(--light-color);
+}
+
+.mcc .repeating-notes {
+  display: grid;
+  grid-template-columns: 1fr 18px;
+  column-gap: 2px;
+}
+
+.mcc .repeating-notes input:nth-child(4n+1),
+.mcc .repeating-notes div:nth-child(4n+2) {
+  background-color: var(--light-color);
+}
+
+.mcc .repeating-artifacts {
+  display: grid;
+  grid-template-columns: 2fr 0.5fr 0.5fr 0.5fr;
+  column-gap: 2px;
+}
+
+.mcc .repeating-artifacts input:nth-child(8n+1),
+.mcc .repeating-artifacts input:nth-child(8n+2),
+.mcc .repeating-artifacts input:nth-child(8n+3),
+.mcc .repeating-artifacts input:nth-child(8n+4) {
+  background-color: var(--light-color);
+}

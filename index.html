@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" type="image/svg+xml" href="/public/images/icon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mcc-sheet</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="mcc">
+      <h1>Mutant Crawl Classics Character Record Sheet</h1>
+      <div class="content">
+        <div class="section first-section">
+          <input class="data-name" type="text" /><button class="reload" name="act_reload">⇅</button>
+          <p class="label">Character name</p>
+          <div class="two-columns ac-hp">
+            <div class="circle">
+              <input class="data-ac" type="text" />
+              <p>AC</p>
+            </div>
+            <div class="square">
+              <input class="data-hp_current" type="text" />
+              <input class="data-hp_max" type="text" />
+              <p>HP</p>
+            </div>
+          </div>
+          <div class="attributes">
+            <div class="circle">
+              <input class="data-attributes_strength_current" type="text" />
+              <input class="data-attributes_strength_max" type="text" />
+            </div>
+            <div class="modifier-section">
+              <p class="clickable context" data-action="roll-attribute" data-attribute="strength">Strength</p>
+              <div class="modifier">
+                <p>Modifier:</p>
+                <input type="text" value="+0" />
+              </div>
+            </div>
+            <div class="circle">
+              <input class="data-attributes_agility_current" type="text" />
+              <input class="data-attributes_agility_max" type="text" />
+            </div>
+            <div class="modifier-section">
+              <p class="clickable context" data-action="roll-attribute" data-attribute="agility">Agility</p>
+              <div class="modifier">
+                <p>Modifier:</p>
+                <input type="text" value="+0" />
+              </div>
+            </div>
+            <div class="circle">
+              <input class="data-attributes_stamina_current" type="text" />
+              <input class="data-attributes_stamina_max" type="text" />
+            </div>
+            <div class="modifier-section">
+              <p class="clickable context" data-action="roll-attribute" data-attribute="stamina">Stamina</p>
+              <div class="modifier">
+                <p>Modifier:</p>
+                <input type="text" value="+0" />
+              </div>
+            </div>
+            <div class="circle">
+              <input class="data-attributes_intelligence_current" type="text" />
+              <input class="data-attributes_intelligence_max" type="text" />
+            </div>
+            <div class="modifier-section">
+              <p class="clickable context" data-action="roll-attribute" data-attribute="intelligence">Intelligence</p>
+              <div class="modifier">
+                <p>Modifier:</p>
+                <input type="text" value="+0" />
+              </div>
+            </div>
+            <div class="circle">
+              <input class="data-attributes_personality_current" type="text" />
+              <input class="data-attributes_personality_max" type="text" />
+            </div>
+            <div class="modifier-section">
+              <p class="clickable context" data-action="roll-attribute" data-attribute="personality">Personality</p>
+              <div class="modifier">
+                <p>Modifier:</p>
+                <input type="text" value="+0" />
+              </div>
+            </div>
+            <div class="circle">
+              <input class="data-attributes_luck_current" type="text" />
+              <input class="data-attributes_luck_max" type="text" />
+            </div>
+            <div class="modifier-section">
+              <p class="clickable context" data-action="roll-attribute" data-attribute="luck-under">Luck</p>
+              <div class="modifier">
+                <p class="clickable context" data-action="roll-attribute" data-attribute="luck">Modifier:</p>
+                <input type="text" value="+0" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section second-section">
+          <input type="text" class="data-class" />
+          <p class="label">Class/Title</p>
+          <div class="two-columns">
+            <input class="data-level" type="number" />
+            <input class="data-xp" type="number" />
+            <p class="label">Level</p>
+            <p class="label">XP</p>
+          </div>
+          <input type="text" class="data-alignment" />
+          <p class="label">Archaic Alignment</p>
+          <div class="three-columns">
+            <div class="container-with-header">
+              <p class="label">Base<br>Speed</p>
+              <input class="data-speed" type="text" />
+            </div>
+            <div class="container-with-header">
+              <p class="label">Melee<br>Attack</p>
+              <input type="text" class="data-calculated_melee-attack-bonus" />
+            </div>
+            <div class="container-with-header">
+              <p class="label">Melee<br>Damage</p>
+              <input type="text" class="data-calculated_melee-damage-bonus" />
+            </div>
+            <div class="container-with-header">
+              <p class="label">Reflex<br>Save</p>
+              <input class="data-saves_reflex" type="text" />
+            </div>
+            <div class="container-with-header">
+              <p class="label">Missile<br>Attack</p>
+              <input type="text" class="data-calculated_missile-attack-bonus" />
+            </div>
+            <div class="container-with-header">
+              <p class="label">Missile<br>Damage</p>
+              <input type="text" class="data-calculated_missile-damage-bonus" />
+            </div>
+            <div class="container-with-header">
+              <p class="label">Fortitude<br>Save</p>
+              <input class="data-saves_fortitude" type="text" />
+            </div>
+            <div class="container-with-header combat-basics">
+              <p class="label" style="grid-column-end: span 2;">Combat Basics</p>
+              <p>Initiative:</p><input class="data-calculated_initiative" type="text" />
+              <p>Action Dice:</p><input class="data-action-dice" type="text" />
+              <p>Crit Die:</p><input type="text" class="data-crit-die" />
+              <p>Crit Table:</p><input type="text" class="data-crit-table" />
+            </div>
+            <div class="container-with-header">
+              <p class="label">Will<br>Save</p>
+              <input class="data-saves_will" type="text" />
+            </div>
+            <div class="black-container">
+              <div class="circle"><input type="text" class="data-artifact-check" /></div>
+              <div class="container">
+                <p class="clickable context" data-action="roll-artifact-check">Artifact Check</p>
+                <div class="two-columns">
+                  <p>Max Tech Level:</p><input type="text" class="data-max-tech-level" />
+                </div>
+              </div>
+            </div>
+            <div class="container-with-header" style="grid-column-end: span 3;">
+              <p class="label">Lucky Roll</p>
+              <textarea class="data-lucky-roll" rows="2"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="section third-section">
+          <input type="hidden" name="active-tab" id="active-tab" value="tab-equipment" />
+          <div class="tab-buttons">
+            <button type="action" name="button-equipment" id="button-equipment">Equipment</button>
+            <button type="action" name="button-inventory" id="button-inventory">Inventory</button>
+            <button type="action" name="button-artifacts" id="button-artifacts">Artifacts</button>
+            <button type="action" name="button-mutations" id="button-mutations">Abilities</button>
+            <button type="action" name="button-notes" id="button-notes">Notes</button>
+          </div>
+          <div class="tab-equipment tab">
+            <div class="container-with-header">
+              <p class="label">Weapons (Melee)<button class="add-item">✚</button><button>✎</button></p>
+              <div class="repeating repeating-weapons-melee"></div>
+            </div>
+            <div class="container-with-header">
+              <p class="label">Weapons (Ranged)<button class="add-item">✚</button><button>✎</button></p>
+              <div class="repeating repeating-weapons-ranged"></div>
+            </div>
+            <div class="container-with-header">
+              <p class="label">Armor<button class="add-item">✚</button><button>✎</button></p>
+              <div class="repeating repeating-armor"></div>
+            </div>
+          </div>
+          <div class="tab-inventory tab">
+            <div class="container-with-header">
+              <p class="label">Equipment (Carried)<button class="add-item">✚</button><button>✎</button></p>
+              <div class="repeating repeating-items"></div>
+            </div>
+          </div>
+          <div class="tab-artifacts tab">
+            <div class="container-with-header">
+              <p class="label">Known Artifacts<button class="add-item">✚</button><button>✎</button></p>
+              <div class="repeating repeating-artifacts"></div>
+            </div>
+          </div>
+          <div class="tab-mutations tab">
+            <div class="container-with-header">
+              <p class="label">Abilities and Skills<button class="add-item">✚</button><button>✎</button></p>
+              <div class="repeating repeating-abilities"></div>
+            </div>
+            <div class="container-with-header">
+              <p class="label">Active Mutations<button class="add-item">✚</button><button>✎</button></p>
+              <div class="repeating repeating-mutations-active"></div>
+            </div>
+            <div class="container-with-header">
+              <p class="label">Passive Mutations and Defects<button class="add-item">✚</button><button>✎</button></p>
+              <div class="repeating repeating-mutations-passive"></div>
+            </div>
+          </div>
+          <div class="tab-notes tab">
+            <div class="container-with-header">
+              <p class="label">Notes<button class="add-item">✚</button><button>✎</button></p>
+              <div class="repeating repeating-notes"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

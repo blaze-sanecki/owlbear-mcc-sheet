@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class="modal-modifier">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Roll Modifier</title>
+	<style>
+		:root {
+			--darkest-color: #111;
+			--lightest-color: #eee;
+			--light-color: #dedede;
+			--dark-color: #323232;
+			--neutral-color: #777;
+		}
+
+		body {
+			margin: 0;
+			padding: 20px;
+			color: var(--darkest-color);
+			background-color: var(--lightest-color);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			box-sizing: border-box;
+			border: 2px solid var(--darkest-color);
+			border-radius: 16px;
+		}
+
+		.content {
+			margin-top: 30px;
+			display: grid;
+			gap: 6px 16px;
+			text-align: center;
+		}
+
+		p {
+			margin: 0;
+			font-size: 16px;
+			line-height: 20px;
+			align-self: center;
+		}
+
+		h3 {
+			margin-top: 0;
+			margin-bottom: 15px;
+			color: var(--lightest-color);
+			background-color: var(--darkest-color);
+			width: 100%;
+			text-align: center;
+			padding: 8px 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		input,
+		select {
+			width: 50px;
+			padding: 0 4px;
+			padding-top: 2px;
+			margin: auto;
+			font-size: 18px;
+			line-height: 18px;
+			height: 18px;
+			text-align: center;
+			border: 2px solid var(--darkest-color);
+			border-radius: 4px;
+			background-color: var(--light-color);
+			color: var(--darkest-color);
+		}
+
+		select {
+			height: 24px;
+			width: 62px;
+			font-size: 16px;
+			padding-top: 0;
+		}
+
+		.buttons {
+			display: flex;
+			gap: 15px;
+			margin-top: 16px;
+		}
+
+		button {
+			padding: 6px 20px;
+			cursor: pointer;
+			border-radius: 4px;
+			font-weight: bold;
+			font-size: 14px;
+			transition: background-color 0.2s;
+		}
+
+		#confirm {
+			color: var(--darkest-color);
+			background: linear-gradient(var(--lightest-color), var(--lightest-color), var(--light-color));
+			border: 1px solid var(--darkest-color);
+		}
+
+		#confirm:hover {
+			color: var(--darkest-color);
+			text-decoration: underline solid 1px var(--darkest-color);
+		}
+
+		#cancel {
+			color: var(--darkest-color);
+			background: linear-gradient(var(--lightest-color), var(--lightest-color), var(--light-color));
+			border: 1px solid var(--darkest-color);
+		}
+
+		#cancel:hover {
+			color: var(--darkest-color);
+			text-decoration: underline solid 1px var(--darkest-color);
+		}
+
+		.input-wrapper button {
+			height: 24px;
+			width: 24px;
+			padding: 0;
+			font-size: 16px;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>Custom Roll</h3>
+	<div class="content" id="inputs-container">
+	</div>
+	<div class="buttons">
+		<button id="confirm">Roll</button>
+		<button id="cancel">Cancel</button>
+	</div>
+	<script type="module" src="/src/modifier_modal.ts"></script>
+</body>
+
+</html>

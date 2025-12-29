@@ -1,0 +1,382 @@
+{
+	"definitionWeaponsMelee": [
+		{
+			"type": "div",
+			"attributes": {
+				"class": "roll context",
+				"data-action": "roll-melee",
+				"title": "Click to roll melee attack"
+			}
+		},
+		{
+			"type": "input",
+			"key": "name",
+			"attributes": {
+				"type": "text",
+				"placeholder": "New Weapon",
+				"title": "Weapon name"
+			}
+		},
+		{
+			"type": "input",
+			"key": "attack-bonus",
+			"attributes": {
+				"class": "attack-bonus",
+				"type": "text",
+				"placeholder": "+0",
+				"title": "Attack bonus"
+			}
+		},
+		{
+			"type": "input",
+			"key": "damage",
+			"attributes": {
+				"class": "damage-dice",
+				"type": "text",
+				"placeholder": "1d4",
+				"title": "Damage"
+			}
+		},
+		{
+			"type": "input",
+			"key": "type",
+			"attributes": {
+				"type": "text",
+				"placeholder": "Slashing",
+				"title": "Damage type"
+			}
+		},
+		{
+			"type": "div",
+			"key": "power",
+			"attributes": {
+				"class": "clickable power-button",
+				"data-action": "edit-power",
+				"title": "Click to edit weapon power"
+			}
+		},
+		{
+			"type": "div",
+			"key": "notes",
+			"attributes": {
+				"class": "clickable notes-button",
+				"data-action": "edit-notes",
+				"title": "Click to edit notes"
+			}
+		}
+	],
+	"definitionWeaponsRanged": [
+		{
+			"type": "div",
+			"attributes": {
+				"class": "roll context",
+				"data-action": "roll-ranged",
+				"title": "Click to roll ranged attack"
+			}
+		},
+		{
+			"type": "input",
+			"key": "name",
+			"attributes": {
+				"type": "text",
+				"placeholder": "New Weapon",
+				"title": "Weapon name"
+			}
+		},
+		{
+			"type": "input",
+			"key": "attack-bonus",
+			"attributes": {
+				"class": "attack-bonus",
+				"type": "text",
+				"placeholder": "+0",
+				"title": "Attack bonus"
+			}
+		},
+		{
+			"type": "input",
+			"key": "damage",
+			"attributes": {
+				"class": "damage-dice",
+				"type": "text",
+				"placeholder": "1d4",
+				"title": "Damage"
+			}
+		},
+		{
+			"type": "input",
+			"key": "range",
+			"attributes": {
+				"type": "text",
+				"placeholder": "30/60/90",
+				"title": "Range"
+			}
+		},
+		{
+			"type": "input",
+			"key": "type",
+			"attributes": {
+				"type": "text",
+				"placeholder": "Heat",
+				"title": "Damage type"
+			}
+		},
+		{
+			"type": "input",
+			"key": "ammo",
+			"attributes": {
+				"type": "text",
+				"placeholder": "10",
+				"title": "Ammunition"
+			}
+		},
+		{
+			"type": "div",
+			"key": "power",
+			"attributes": {
+				"class": "clickable power-button",
+				"data-action": "edit-power",
+				"title": "Click to edit weapon power"
+			}
+		},
+		{
+			"type": "div",
+			"key": "notes",
+			"attributes": {
+				"class": "clickable notes-button",
+				"data-action": "edit-notes",
+				"title": "Click to edit notes"
+			}
+		}
+	],
+	"definitionArmor": [
+		{
+			"type": "input",
+			"key": "name",
+			"attributes": {
+				"type": "text",
+				"placeholder": "New Armor",
+				"title": "Armor name"
+			}
+		},
+		{
+			"type": "input",
+			"key": "ac-bonus",
+			"attributes": {
+				"type": "text",
+				"placeholder": "+0",
+				"title": "AC Bonus"
+			}
+		},
+		{
+			"type": "input",
+			"key": "fumble-die",
+			"attributes": {
+				"type": "text",
+				"placeholder": "1d4",
+				"title": "Fumble Die"
+			}
+		},
+		{
+			"type": "div",
+			"key": "power",
+			"attributes": {
+				"class": "clickable power-button",
+				"data-action": "edit-power",
+				"title": "Click to edit armor power"
+			}
+		},
+		{
+			"type": "div",
+			"key": "notes",
+			"attributes": {
+				"class": "clickable notes-button",
+				"data-action": "edit-notes",
+				"title": "Click to edit notes"
+			}
+		}
+	],
+	"definitionItems": [
+		{
+			"type": "input",
+			"key": "name",
+			"attributes": {
+				"type": "text",
+				"placeholder": "New Item",
+				"title": "Item name"
+			}
+		},
+		{
+			"type": "input",
+			"key": "quantity",
+			"attributes": {
+				"type": "text",
+				"placeholder": "0",
+				"title": "Quantity"
+			}
+		}
+	],
+	"definitionArtifacts": [
+		{
+			"type": "input",
+			"key": "name",
+			"attributes": {
+				"type": "text",
+				"placeholder": "New Artifact",
+				"title": "Artifact name"
+			}
+		},
+		{
+			"type": "input",
+			"key": "tech-level",
+			"attributes": {
+				"type": "text",
+				"placeholder": "1",
+				"title": "Tech Level"
+			}
+		},
+		{
+			"type": "input",
+			"key": "complexity",
+			"attributes": {
+				"type": "text",
+				"placeholder": "1",
+				"title": "Complexity"
+			}
+		},
+		{
+			"type": "input",
+			"key": "check-result",
+			"attributes": {
+				"type": "text",
+				"placeholder": "0",
+				"title": "Check Result"
+			}
+		}
+	],
+	"definitionMutationsPassive": [
+		{
+			"type": "input",
+			"key": "name",
+			"attributes": {
+				"type": "text",
+				"placeholder": "New Mutation",
+				"title": "Mutation name"
+			}
+		},
+		{
+			"type": "input",
+			"key": "check-result",
+			"attributes": {
+				"type": "text",
+				"placeholder": "20",
+				"title": "Check Result"
+			}
+		},
+		{
+			"type": "input",
+			"key": "manifestation",
+			"attributes": {
+				"type": "text",
+				"placeholder": "Glowing eyes",
+				"title": "Manifestation"
+			}
+		},
+		{
+			"type": "input",
+			"key": "effect",
+			"attributes": {
+				"type": "text",
+				"placeholder": "See in the dark",
+				"title": "Effect"
+			}
+		}
+	],
+	"definitionMutationsActive": [
+		{
+			"type": "input",
+			"key": "name",
+			"attributes": {
+				"type": "text",
+				"placeholder": "New Mutation",
+				"title": "Mutation name"
+			}
+		},
+		{
+			"type": "input",
+			"key": "duration",
+			"attributes": {
+				"type": "text",
+				"placeholder": "Instant",
+				"title": "Duration"
+			}
+		},
+		{
+			"type": "input",
+			"key": "save",
+			"attributes": {
+				"type": "text",
+				"placeholder": "PER",
+				"title": "Save"
+			}
+		},
+		{
+			"type": "input",
+			"key": "manifestation",
+			"attributes": {
+				"type": "text",
+				"placeholder": "Glowing Eyes",
+				"title": "Manifestation"
+			}
+		},
+		{
+			"type": "input",
+			"key": "lost",
+			"attributes": {
+				"type": "text",
+				"placeholder": "false",
+				"title": "Lost"
+			}
+		}
+	],
+	"definitionAbilities": [
+		{
+			"type": "input",
+			"key": "name",
+			"attributes": {
+				"type": "text",
+				"placeholder": "New Ability",
+				"title": "Ability Name"
+			}
+		},
+		{
+			"type": "input",
+			"key": "description",
+			"attributes": {
+				"type": "text",
+				"placeholder": "Ability Description",
+				"title": "Description"
+			}
+		}
+	],
+	"definitionNotes": [
+		{
+			"type": "input",
+			"key": "name",
+			"attributes": {
+				"type": "text",
+				"placeholder": "Note Title",
+				"title": "Note Name"
+			}
+		},
+		{
+			"type": "div",
+			"key": "notes",
+			"attributes": {
+				"class": "clickable notes-button",
+				"data-action": "edit-notes",
+				"title": "Click to edit note"
+			}
+		}
+	]
+}

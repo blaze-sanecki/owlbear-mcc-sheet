@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="modal-edit">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Edit Value</title>
+	<style>
+		:root {
+			--darkest-color: #111;
+			--lightest-color: #eee;
+			--light-color: #dedede;
+			--dark-color: #323232;
+			--neutral-color: #777;
+		}
+
+		body {
+			margin: 0;
+			padding: 20px;
+			color: var(--darkest-color);
+			background-color: var(--lightest-color);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			box-sizing: border-box;
+			border: 2px solid var(--darkest-color);
+			border-radius: 16px;
+		}
+
+		.content {
+			margin-top: 30px;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			width: 100%;
+			flex: 1;
+			overflow-y: auto;
+		}
+
+		h3 {
+			margin-top: 0;
+			margin-bottom: 15px;
+			color: var(--lightest-color);
+			background-color: var(--darkest-color);
+			width: 100%;
+			text-align: center;
+			padding: 10px 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 14px 14px 0 0;
+		}
+
+		input,
+		textarea,
+		select {
+			padding: 8px;
+			border-radius: 4px;
+			border: 1px solid var(--neutral-color);
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		textarea {
+			resize: none;
+			flex: 1;
+			min-height: 100px;
+		}
+
+		.buttons {
+			display: flex;
+			gap: 10px;
+			margin-top: 20px;
+			width: 100%;
+			justify-content: center;
+		}
+
+		button {
+			padding: 8px 16px;
+			border-radius: 4px;
+			border: none;
+			cursor: pointer;
+			font-weight: bold;
+		}
+
+		#confirm {
+			background-color: var(--darkest-color);
+			color: var(--lightest-color);
+		}
+
+		#cancel {
+			background-color: var(--neutral-color);
+			color: var(--lightest-color);
+		}
+	</style>
+</head>
+
+<body>
+	<h3 id="modal-title">Edit</h3>
+	<div id="content" class="content">
+		<!-- Dynamic content will be injected here -->
+	</div>
+	<div class="buttons">
+		<button id="cancel">Cancel</button>
+		<button id="confirm">Save</button>
+	</div>
+	<script type="module" src="/src/edit_modal.ts"></script>
+</body>
+
+</html>
