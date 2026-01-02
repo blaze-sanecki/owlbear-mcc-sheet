@@ -63,7 +63,11 @@
 			"attack-bonus": "+0",
 			"damage": "1d3+0",
 			"type": "Bludgeoning",
-			"notes": "Natural Weapon"
+			"notes": "Natural Weapon",
+			"defaults": {
+				"attribute": "strength",
+				"actionDie": "default"
+			}
 		}
 	],
 	"weapons-ranged": [
@@ -72,7 +76,11 @@
 			"attack-bonus": "+0",
 			"damage": "1d3+0",
 			"range": "10/20/30",
-			"notes": "Improvised"
+			"notes": "Improvised",
+			"defaults": {
+				"attribute": "agility",
+				"actionDie": "default"
+			}
 		}
 	],
 	"armor": [

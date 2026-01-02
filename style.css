@@ -19,12 +19,12 @@
   font-size: 14px;
 
   color-scheme: light dark;
-  --darkest-color: #111;
-  --lightest-color: #eee;
-  --light-color: #dedede;
-  --medium-light-color: #cecece;
-  --darkest-light-color: #bebebe;
-  --dark-color: #323232;
+  --darkest-color: #121212;
+  --lightest-color: #ededed;
+  --light-color: #dcdcdc;
+  --medium-light-color: #cbcbcb;
+  --darkest-light-color: #bababa;
+  --dark-color: #333;
   --neutral-color: #777;
 
   font-synthesis: none;
@@ -434,7 +434,9 @@ body {
 
 .mcc .third-section .tab .container-with-header p button {
   float: right;
-  padding: 0 4px;
+  padding: 0;
+  width: 24px;
+  text-align: center;
   margin: 0;
   margin-right: 4px;
   border: none;
@@ -446,6 +448,10 @@ body {
 
 .mcc .third-section .tab .container-with-header p button:hover {
   color: var(--neutral-color);
+}
+
+.mcc .third-section .tab .container-with-header p button:disabled {
+  cursor: not-allowed;
 }
 
 .mcc .circle input,
@@ -561,6 +567,8 @@ body {
   font-weight: 400;
   padding: 0;
 }
+
+
 
 .mcc .tab .repeating div {
   height: 16px;
@@ -682,8 +690,7 @@ body {
 }
 
 .mcc .repeating .roll:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .mcc .repeating .notes-button {
@@ -692,8 +699,7 @@ body {
 }
 
 .mcc .repeating .notes-button:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .mcc .repeating .power-button {
@@ -702,19 +708,60 @@ body {
 }
 
 .mcc .repeating .power-button:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .mcc .repeating-items {
   display: grid;
-  grid-template-columns: 1fr 50px;
+  grid-template-columns: 1fr 30px;
   column-gap: 2px;
 }
 
 .mcc .repeating-items input:nth-child(4n+1),
 .mcc .repeating-items input:nth-child(4n+2) {
   background-color: var(--light-color);
+}
+
+.mcc .repeating.editing {
+  display: flex;
+  flex-direction: column;
+}
+
+.mcc .repeating.editing .edit-row {
+  display: grid;
+  grid-template-columns: 1fr 18px 18px 18px;
+  column-gap: 2px;
+  background-color: var(--medium-light-color);
+  align-items: center;
+  border: none;
+  padding: 0;
+  width: 100%;
+}
+
+.mcc .repeating.editing .edit-row:nth-child(odd) {
+  background-color: var(--light-color);
+}
+
+.mcc .repeating.editing .edit-row span {
+  padding-left: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 20px;
+}
+
+.mcc .repeating.editing .edit-row button {
+  padding: 0;
+  height: 16px;
+  font-size: 12px;
+  line-height: 12px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.edit-list.active {
+  background-color: var(--darkest-color);
+  color: var(--lightest-color);
 }
 
 .mcc .repeating-abilities {
@@ -730,8 +777,13 @@ body {
 
 .mcc .repeating-mutations-active {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 0.5fr 1.5fr 0.5fr;
+  grid-template-columns: 1.5fr 1fr 0.5fr 1.5fr 16px;
   column-gap: 2px;
+}
+
+.mcc .repeating-mutations-active input:nth-child(5n+5) {
+  width: 100%;
+  border-radius: 0;
 }
 
 .mcc .repeating-mutations-active input:nth-child(10n+1),
@@ -768,7 +820,7 @@ body {
 
 .mcc .repeating-artifacts {
   display: grid;
-  grid-template-columns: 2fr 0.5fr 0.5fr 0.5fr;
+  grid-template-columns: 2fr 30px 30px 30px;
   column-gap: 2px;
 }
 
@@ -777,4 +829,30 @@ body {
 .mcc .repeating-artifacts input:nth-child(8n+3),
 .mcc .repeating-artifacts input:nth-child(8n+4) {
   background-color: var(--light-color);
+}
+
+.mcc .import,
+.mcc .export {
+  width: 28px;
+  height: 28px;
+  mask-size: contain;
+  position: absolute;
+  top: 20px;
+  background-color: var(--lightest-color);
+}
+
+.mcc .import:hover,
+.mcc .export:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.mcc .import {
+  mask-image: url('/images/icon-import.svg');
+  right: 18px;
+}
+
+.mcc .export {
+  mask-image: url('/images/icon-export.svg');
+  right: 48px;
 }
